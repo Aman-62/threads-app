@@ -8,7 +8,6 @@ async function Page() {
     if (!user) return null; // to avoid typescript warnings
 
     const userInfo = await fetchUser(user.id);
-    console.log(userInfo);
 
     if (userInfo?.onboarded) redirect("/");
 
